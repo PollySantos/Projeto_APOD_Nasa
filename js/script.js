@@ -13,7 +13,7 @@ botao.addEventListener('click', function(){
         success: function(result){
             titulo.innerHTML = `${result.title}`
             texto.innerHTML = `${result.explanation}`
-            img.innerHTML = `<img src="${result.url}"/>`
+            img.innerHTML = `<img style= "width: 500px" src="${result.url}"/>`
           }
       })
   });

@@ -12,6 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 #logo {
@@ -28,8 +29,7 @@ header > h1 {
     color: white;
     font-size: 45px;
     margin: auto;
-    margin-top: 5rem;
-    margin-left: 39rem;
+   
 }
 audio {
     margin-right: 1rem;
@@ -53,7 +53,6 @@ audio:hover{
     align-items: center;
     margin: 2em;
     background: #0b3d91;
-    border: 2px solid black;
     border-radius: 10px;
     width: 70rem; 
     margin: auto;
@@ -108,14 +107,14 @@ audio:hover{
     line-height: 1.9em;
     padding: 1rem;
     margin: 1%;
-    width: 90%;
+    width: 500px;
     
 }
 
 #imagem {
     padding: 2%;
     margin: 2% 0;
-    max-width: 80%;
+    max-width: px;
     border-radius: 10px;
  
 }
