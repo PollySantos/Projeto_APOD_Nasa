@@ -4,7 +4,7 @@ let img = document.getElementById('imagem')
 let botao = document.getElementById('bnt')
 
 botao.addEventListener('click', function(){
-    apiKey = 'BfhPwLYLfzhkf2tBwWpsd4PdGSX9bVUBF4Dw26LW'
+    apiKey = 'UPlCevYthBPR3xkQSSxcihB0NaFOlxIbCVoQnLAV'
     data = document.getElementById('selectDate').value
     let url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${data}`
   
