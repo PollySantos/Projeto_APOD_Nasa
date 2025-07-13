@@ -1,7 +1,7 @@
 let text = document.getElementById('texto')
 let title = document.getElementById('titulo')
 let img = document.getElementById('imagem')
-let botao = document.getElementById('bnt')
+let botao = document.getElementById('btn')
 
 botao.addEventListener('click', function(){
     apiKey = 'UPlCevYthBPR3xkQSSxcihB0NaFOlxIbCVoQnLAV'
@@ -13,7 +13,7 @@ botao.addEventListener('click', function(){
         success: function(result){
             titulo.innerHTML = `${result.title}`
             texto.innerHTML = `${result.explanation}`
-            img.innerHTML = `<img style= "width: 500px" src="${result.url}"/>`
+            img.innerHTML = `<img class="imagemNasa" src="${result.url}"/>`
           }
       })
   });
