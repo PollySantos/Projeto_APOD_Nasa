@@ -1,5 +1,7 @@
-html {
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -9,42 +11,43 @@ body {
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
-  height: 100%;
-  margin: 0;
+  font-family: 'PT Sans', sans-serif;
+  box-sizing: border-box;
 }
 
-
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 1rem;
+  gap: 1rem;
 }
 
 #logo {
-  width: 12rem;
-  height: 10rem;
+  width: 10rem;
+  height: auto;
   animation: flutuacao 6s ease-in-out infinite;
 }
 
 header > h1 {
   font-weight: bold;
-  font-family: 'PT Sans', sans-serif;
   color: white;
-  font-size: 45px;
+  font-size: 2.5rem;
   text-align: center;
-  margin: auto;
+  flex: 1;
 }
 
+/* AUDIO PLAYER */
 audio {
-  margin: 1rem;
-  margin-top: -6rem;
+  margin: 0.5rem auto;
   background-color: rgb(230, 222, 222);
-  width: 100px;
-  height: 20px;
+  width: 120px;
+  height: 24px;
   border-radius: 40px;
   cursor: pointer;
+  display: block;
 }
 
 audio:hover {
@@ -52,11 +55,11 @@ audio:hover {
   transition: .2s linear;
 }
 
-
+/* CONTAINER */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
   max-width: 1100px;
   margin: 4rem auto;
@@ -68,11 +71,14 @@ audio:hover {
 
 .container input {
   font-family: 'Comfortaa', monospace;
-  font-size: 12px;
-  padding: 8px 16px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   margin-top: 1rem;
   border: none;
-}  
+  border-radius: 10px;
+  width: 100%;
+  max-width: 122px;
+}
 
 .container button {
   color: black;
@@ -81,9 +87,11 @@ audio:hover {
   border-radius: 10px;
   text-transform: uppercase;
   font-family: 'PT Sans', sans-serif;
-  margin: 1% 0 2%;
-  padding: 6px 14px;
+  margin: 1rem 0;
+  padding: 0.3rem 1.1rem;
   cursor: pointer;
+  width: 100%;
+  max-width: 85px;
 }
 
 .container button:hover {
@@ -95,33 +103,32 @@ audio:hover {
   text-align: center;
   margin: 1em 0;
   font-family: 'Audiowide', monospace;
-  font-size: 20px;
+  font-size: 1.5rem;
   color: #fff;
 }
 
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
-  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
 #texto {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 300px;
   max-width: 600px;
   text-align: justify;
-  font-family: 'PT Sans', sans-serif;
   color: #fff;
-  letter-spacing: 2px;
-  line-height: 1.9em;
+  letter-spacing: 1.5px;
+  line-height: 1.8em;
   padding: 1rem;
+  font-size: 1rem;
 }
 
 #imagem {
-  flex: 1;
+  flex: 1 1 300px;
   padding: 1rem;
   text-align: center;
 }
@@ -136,8 +143,8 @@ footer p {
   color: white;
   text-align: center;
   margin: 1em 0 0.5em 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
-  font-size: 18px;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-size: 1rem;
 }
 
 a {
@@ -154,11 +161,44 @@ a {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
+  header > h1 {
+    font-size: 2rem;
+  }
+
   .container {
     width: 95%;
+  }
+
+  #titulo {
+    font-size: 1.3rem;
+  }
+
+  .container input,
+  .container button {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #logo {
+    width: 8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header > h1 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+  }
+
+  .container {
     padding: 1rem;
-    margin: 2rem auto;
   }
 
   .content {
@@ -166,31 +206,38 @@ a {
     align-items: center;
   }
 
-  #texto {
+  #texto, #imagem {
+    padding: 0.5rem;
     width: 100%;
-    text-align: left;
-  }
-
-  #imagem {
-    width: 100%;
-    text-align: center;
-  }
-
-  #imagem img {
-    width: 100%;
-    height: auto;
-  }
-
-  header > h1 {
-    font-size: 1.4rem;
-    padding: 0 1rem;
-  }
-
-  #titulo {
-    font-size: 1.1rem;
   }
 
   audio {
     width: 90%;
+  }
+
+  #titulo {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header > h1 {
+    font-size: 1.3rem;
+  }
+
+  #titulo {
+    font-size: 1rem;
+  }
+
+  .container input {
+    font-size: 0.9rem;
+  }
+
+  .container button {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
   }
 }
